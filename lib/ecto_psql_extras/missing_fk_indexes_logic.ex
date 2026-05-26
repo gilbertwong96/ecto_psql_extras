@@ -3,7 +3,6 @@ defmodule EctoPSQLExtras.MissingFkIndexesLogic do
   Detect missing foreign key indexes
   """
 
-  require Logger
 
   def run(repo, table_name \\ nil) do
     all_indexes = EctoPSQLExtras.indexes(repo, format: :raw).rows

@@ -3,7 +3,6 @@ defmodule EctoPSQLExtras.MissingFkConstraintsLogic do
   Detect missing foreign key constraints
   """
 
-  require Logger
 
   def run(repo, table_name \\ nil) do
     all_constraints = EctoPSQLExtras.table_foreign_keys(repo, format: :raw).rows
