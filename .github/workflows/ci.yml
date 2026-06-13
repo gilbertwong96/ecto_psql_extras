@@ -32,9 +32,6 @@ jobs:
           - pair:
               elixir: 1.15
               otp: 26
-          - pair:
-              elixir: 1.14
-              otp: 25
     steps:
       - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1

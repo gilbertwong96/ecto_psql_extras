@@ -7,7 +7,7 @@ defmodule EctoPSQLExtras.Mixfile do
     [
       app: :ecto_psql_extras,
       version: @version,
-      elixir: "~> 1.11",
+      elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
       description: description(),
       deps: deps(),
@@ -22,7 +22,11 @@ defmodule EctoPSQLExtras.Mixfile do
       {:ecto_sql, "~> 3.7"},
       {:postgrex, "> 0.16.0"},
       {:ex_doc, ">= 0.30.0", only: :dev, runtime: false},
-      {:mock, "~> 0.3.0", only: :test}
+      {:mock, "~> 0.3.0", only: :test},
+      # Force meck 1.2+ so we keep OTP 29 support — mock 0.3.9 still pins
+      # `meck ~> 0.9.2` which doesn't compile on OTP 28+ (deprecated `catch`
+      # expression was removed in OTP 28).
+      {:meck, "~> 1.2", only: :test, override: true}
     ]
   end
 
