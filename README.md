@@ -1,5 +1,9 @@
 # Ecto PSQL Extras [![Hex.pm](https://img.shields.io/hexpm/v/ecto_psql_extras.svg)](https://hex.pm/packages/ecto_psql_extras) [![Hex.pm](https://img.shields.io/hexpm/dt/ecto_psql_extras.svg)](https://hex.pm/packages/ecto_psql_extras) [![Hex.pm](https://img.shields.io/hexpm/l/ecto_psql_extras.svg)](https://github.com/pawurb/ecto_psql_extras/blob/main/LICENSE) [![CI](https://github.com/pawurb/ecto_psql_extras/workflows/CI/badge.svg)](https://github.com/pawurb/ecto_psql_extras/actions)
 
+> ⚠️ This project is no longer actively maintained.
+>
+> Existing releases will remain available on Hex.
+
 Elixir port of [Heroku PG Extras](https://github.com/heroku/heroku-pg-extras). The goal of this project is to provide powerful insights into the PostgreSQL database for Elixir apps that are not using the Heroku PostgreSQL plugin.
 
 Queries can be used to obtain information about a Postgres instance, that may be useful when analyzing performance issues. This includes information about locks, index usage, buffer cache hit ratios and vacuum statistics. Elixir API enables developers to easily integrate the tool into e.g. automatic monitoring tasks.
